@@ -65,44 +65,83 @@
             letter-spacing: 2px;
         }
 
-        .carousel {
-            margin: 40px auto;
+        section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #2f3b4c;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .cta-container {
+            text-align: center;
+            margin: 20px 0;
             display: flex;
-            overflow: hidden;
-            width: 90%;
-            max-width: 800px;
-            border-radius: 15px;
-            position: relative;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
 
-        .carousel img {
-            min-width: 100%;
-            object-fit: cover;
-            transition: all 0.5s ease;
-        }
-
-        .carousel-buttons {
-            position: absolute;
-            top: 50%;
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--accent-purple), var(--accent-color));
+            color: #000;
+            font-weight: 600;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+            transition: all 0.3s ease;
             width: 100%;
+            max-width: 320px;
+        }
+
+        .btn-wpp {
+            background: var(--whatsapp-color);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-wpp:hover {
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .wpp-floating {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--whatsapp-color);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+            z-index: 100;
             display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .carousel-buttons button {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-            transition: transform 0.3s;
-        }
-
-        .carousel-buttons button:hover {
-            transform: scale(1.1);
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
         }
 
         @media (max-width: 600px) {
@@ -129,44 +168,8 @@
         </div>
     </header>
 
-    <div class="carousel">
-        <img src="https://via.placeholder.com/800x400" alt="Foto ou vídeo de trabalho 1">
-        <img src="https://via.placeholder.com/800x400" alt="Foto ou vídeo de trabalho 2">
-        <img src="https://via.placeholder.com/800x400" alt="Foto ou vídeo de trabalho 3">
-    </div>
-
-    <script>
-        const carousel = document.querySelector('.carousel');
-        const images = carousel.querySelectorAll('img');
-        let currentIndex = 0;
-
-        function showImage(index) {
-            carousel.style.transform = `translateX(-${index * 100}%)`;
-        }
-
-        const buttons = document.createElement('div');
-        buttons.className = 'carousel-buttons';
-        const prevButton = document.createElement('button');
-        prevButton.innerHTML = '❮';
-        const nextButton = document.createElement('button');
-        nextButton.innerHTML = '❯';
-
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage(currentIndex);
-        });
-
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
-        });
-
-        buttons.appendChild(prevButton);
-        buttons.appendChild(nextButton);
-        carousel.appendChild(buttons);
-    </script>
-
     <div class="container">
+        <!-- Exemplo de conteúdo -->
         <section id="sobre">
             <h2>Sobre o Profissional</h2>
             <p>Baseado em Rio Claro (SP) com disponibilidade nacional.</p>
