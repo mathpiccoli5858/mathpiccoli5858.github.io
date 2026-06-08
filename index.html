@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus Piccoli | Light Designer & LED Specialist</title>
+    
+    <!-- Link do Google Fonts para carregar a fonte 'Inter' corretamente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Mesma estilização fornecida anteriormente */
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --accent-color: #00f2fe; /* Azul Neon / LED */
+            --accent-purple: #4facfe;
+            --text-color: #c5c6c7;
+            --text-light: #ffffff;
+            --whatsapp-color: #25d366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            border-bottom: 4px solid var(--accent-color);
+            border-radius: 0 0 20px 20px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--text-light);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #2f3b4c;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .cta-container {
+            text-align: center;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--accent-purple), var(--accent-color));
+            color: #000;
+            font-weight: 600;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .btn-wpp {
+            background: var(--whatsapp-color);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-wpp:hover {
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .wpp-floating {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--whatsapp-color);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/seunumerodetelefone" class="wpp-floating" target="_blank">
+        💬
+    </a>
+
+    <header>
+        <div class="container">
+            <h1>Matheus Piccoli</h1>
+            <p>Light Designer & LED Specialist</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Exemplo de conteúdo -->
+        <section id="sobre">
+            <h2>Sobre o Profissional</h2>
+            <p>Baseado em Rio Claro (SP) com disponibilidade nacional.</p>
+        </section>
+
+        <section id="cta">
+            <div class="cta-container">
+                <a href="https://instagram.com/seuperfil" target="_blank" class="btn">
+                    Ver Portfólio no Instagram
+                </a>
+                <a href="https://wa.me/seunumerodetelefone" target="_blank" class="btn btn-wpp">
+                    Fale Comigo no WhatsApp
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Matheus Piccoli - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
